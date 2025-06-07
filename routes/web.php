@@ -22,3 +22,7 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
+
+  Route::get('/admin/film', function () {
+        return view('admin.daftarfilm');
+    })->name('admin.film');
